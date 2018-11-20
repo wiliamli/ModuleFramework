@@ -7,8 +7,8 @@
     <ProjectGuid>{33AD5111-95A4-46A0-80C3-3BDA1114A497}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jwell.Infrastructure</RootNamespace>
-    <AssemblyName>Jwell.Infrastructure</AssemblyName>
+    <RootNamespace>Jwell.Repository</RootNamespace>
+    <AssemblyName>Jwell.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Context\DasebasebType.cs" />
     <Compile Include="Context\JwellDbContext.cs" />
+    <Compile Include="Context\JwellDbInitializer.cs" />
     <Compile Include="JwellRepositoryModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdminUserRepository.cs" />

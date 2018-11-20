@@ -18,4 +18,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\ICSharp
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\NPOI.OpenXmlFormats.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\NPOI.OpenXml4Net.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\NPOI.xml
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\obj\Debug\Jwell.Modules.Configure.csprojAssemblyReference.cache
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Module.Configure\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll

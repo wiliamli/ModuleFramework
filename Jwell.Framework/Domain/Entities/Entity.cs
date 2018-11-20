@@ -10,7 +10,7 @@ namespace Jwell.Framework.Domain.Entities
         /// <summary>
         /// Unique identifier for this entity.
         /// </summary>
-        public virtual TPrimaryKey Id { get; set; }
+        public virtual TPrimaryKey ID { get; set; }
 
         /// <summary>
         /// Checks if this entity is transient (it has not an Id).
@@ -18,7 +18,7 @@ namespace Jwell.Framework.Domain.Entities
         /// <returns>True, if this entity is transient</returns>
         public virtual bool IsTransient()
         {
-            if (EqualityComparer<TPrimaryKey>.Default.Equals(Id, default(TPrimaryKey)))
+            if (EqualityComparer<TPrimaryKey>.Default.Equals(ID, default(TPrimaryKey)))
             {
                 return true;
             }
@@ -26,12 +26,12 @@ namespace Jwell.Framework.Domain.Entities
             //Workaround for EF Core since it sets int/long to min value when attaching to dbcontext
             if (typeof(TPrimaryKey) == typeof(int))
             {
-                return Convert.ToInt32(Id) <= 0;
+                return Convert.ToInt32(ID) <= 0;
             }
 
             if (typeof(TPrimaryKey) == typeof(long))
             {
-                return Convert.ToInt64(Id) <= 0;
+                return Convert.ToInt64(ID) <= 0;
             }
 
             return false;
@@ -78,18 +78,18 @@ namespace Jwell.Framework.Domain.Entities
                 return false;
             }
 
-            return Id.Equals(other.Id);
+            return ID.Equals(other.ID);
         }
 
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            if (Id == null)
+            if (ID == null)
             {
                 return 0;
             }
 
-            return Id.GetHashCode();
+            return ID.GetHashCode();
         }
 
         /// <inheritdoc/>
@@ -112,7 +112,7 @@ namespace Jwell.Framework.Domain.Entities
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"[{GetType().Name} {Id}]";
+            return $"[{GetType().Name} {ID}]";
         }
     }
 }

@@ -5,19 +5,38 @@ using Jwell.Application.Services.Params;
 using Jwell.Framework.Mvc;
 using Jwell.Framework.Paging;
 using Jwell.Framework.Excel;
+using Jwell.Sample.Models;
+using Jwell.Modules.Logger;
+using Jwell.Modules.Logger.Log.Model;
+using System;
 
 namespace Jwell.Sample.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class HomeController : BaseController
     {
         private IAdminUserService adminUserService;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="adminUserService"></param>
         public HomeController(IAdminUserService adminUserService)
         {
             this.adminUserService = adminUserService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [UserAuthorize]
         public ActionResult Index()
         {
+            //JwellLogger.Info(new Marker("Jwell.Sample","HomeController","Index"),
+            //    Guid.NewGuid().ToString("N"),"testLog", "HomeController", "Index");
 
             int count = adminUserService.Count();
 
@@ -26,6 +45,11 @@ namespace Jwell.Sample.Controllers
             return View(count);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public StandardJsonResult<PageResult<AdminUserDto>> List(SearchAdminUserParam request)
         {
             StandardJsonResult<PageResult<AdminUserDto>> result = 
@@ -38,6 +62,11 @@ namespace Jwell.Sample.Controllers
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public StandardJsonResult Save(AdminUserDto dto)
         {
             return base.StandardAction(() =>{
@@ -45,10 +74,14 @@ namespace Jwell.Sample.Controllers
             });
         }
 
-        public StandardJsonResult GetResult()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetResult()
         {
             int result = 0;
-            StandardJsonResult jsonResult=  base.StandardAction<int>(() =>
+            StandardJsonResult jsonResult = base.StandardAction<int>(() =>
             {
                 result = adminUserService.Count();
                 return result;
@@ -58,9 +91,13 @@ namespace Jwell.Sample.Controllers
             return jsonResult;
         }
 
+        /// <summary>
+        /// Excel导出
+        /// </summary>
+        /// <param name="request"></param>
         public void Export(SearchAdminUserParam request)
         {
-             DownloadFile("filename",adminUserService.GetAdminUserDtos(request).Value.ToExcelContent("filename"));
+             DownloadFile("filename",adminUserService.GetAdminUserDtos(request).Pager.ToExcelContent("filename"));
         }
     }
 }

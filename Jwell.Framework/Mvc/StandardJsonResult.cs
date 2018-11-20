@@ -48,23 +48,27 @@ namespace Jwell.Framework.Mvc
 
         protected virtual IStandardResult ToJsonObject()
         {
-            var result = new StandardResult();
-            result.Success = this.Success;
-            result.Message = this.Message;
+            var result = new StandardResult
+            {
+                Success = this.Success,
+                Message = this.Message
+            };
             return result;
         }
     }
 
     public class StandardJsonResult<T> : StandardJsonResult, IStandardResult<T>
     {
-        public T Value { get; set; }
+        public T Data { get; set; }
 
         protected override IStandardResult ToJsonObject()
         {
-            var result = new StandardResult<T>();
-            result.Success = this.Success;
-            result.Message = this.Message;
-            result.Value = this.Value;
+            var result = new StandardResult<T>
+            {
+                Success = this.Success,
+                Message = this.Message,
+                Data = this.Data
+            };
             return result;
         }
     }

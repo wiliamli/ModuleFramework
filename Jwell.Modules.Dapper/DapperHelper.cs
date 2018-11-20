@@ -25,7 +25,7 @@ namespace Jwell.Modules.Dapper
         {
             try
             {
-                using (conn = DapperFactory.CreateOracleConnection())
+                using (conn = DapperFactory.CreateOracleConnection)
                 {
                     return conn.ExecuteScalar<U>(sql, parameters);
                 }
@@ -47,7 +47,7 @@ namespace Jwell.Modules.Dapper
             {
                 if (trans == null)
                 {
-                    using (conn = DapperFactory.CreateOracleConnection())
+                    using (conn = DapperFactory.CreateOracleConnection)
                     {
                         return conn.Execute(sql, parameters);
                     }
@@ -78,7 +78,7 @@ namespace Jwell.Modules.Dapper
             }
             try
             {
-                using (conn = DapperFactory.CreateOracleConnection())
+                using (conn = DapperFactory.CreateOracleConnection)
                 {
                     return conn.Query<T>(sql, parameters);
                 }
@@ -98,7 +98,7 @@ namespace Jwell.Modules.Dapper
             IDbConnection conn = null;
             try
             {
-                using (conn = DapperFactory.CreateOracleConnection())
+                using (conn = DapperFactory.CreateOracleConnection)
                 {
                     return conn.Query<U>(sql, parameters);
                 }

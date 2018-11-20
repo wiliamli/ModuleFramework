@@ -6,9 +6,15 @@ using System.Web.Http.Filters;
 
 namespace Jwell.Sample
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ExceptionHandleAttribute: ExceptionFilterAttribute
     { 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="actionExecutedContext"></param>
         public override void OnException(HttpActionExecutedContext actionExecutedContext)
         {
             base.OnException(actionExecutedContext);

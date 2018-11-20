@@ -55,33 +55,49 @@ namespace Jwell.Modules.EntityFramework.Uow
 
         public void Commit()
         {
-            foreach (var context in GetAllActiveContexts())
+            try
             {
-                context.SaveChanges();
-            }
-
-            if (Options.UseTransaction)
-            {
-                foreach (var tran in GetAllActiveTransactions())
+                foreach (var context in GetAllActiveContexts())
                 {
-                    tran.Commit();
+                    context.SaveChanges();
                 }
+
+                if (Options.UseTransaction)
+                {
+                    foreach (var tran in GetAllActiveTransactions())
+                    {
+                        tran.Commit();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Rollback();
+                throw e;
             }
         }
 
         public async Task CommitAsync()
         {
-            foreach (var context in GetAllActiveContexts())
+            try
             {
-                await context.SaveChangesAsync();
-            }
-
-            if (Options.UseTransaction)
-            {
-                foreach (var tran in GetAllActiveTransactions())
+                foreach (var context in GetAllActiveContexts())
                 {
-                    tran.Commit();
+                    await context.SaveChangesAsync();
                 }
+
+                if (Options.UseTransaction)
+                {
+                    foreach (var tran in GetAllActiveTransactions())
+                    {
+                        tran.Commit();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Rollback();
+                throw ex;
             }
         }
 

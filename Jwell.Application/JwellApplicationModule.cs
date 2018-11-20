@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Jwell.Framework.Modules;
-using Jwell.Infrastructure;
 using Jwell.Modules.Cache;
+using Jwell.Repository;
 
 namespace Jwell.Application
 {

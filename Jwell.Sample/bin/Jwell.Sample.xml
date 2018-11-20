@@ -14,18 +14,139 @@
             
             </summary>
         </member>
-        <member name="T:Jwell.Sample.App_Start.ApiIgnoreDocumentExtensions">
-            <summary>
-            Swagger扩展
-            </summary>
-        </member>
-        <member name="M:Jwell.Sample.App_Start.ApiIgnoreDocumentExtensions.Apply(Swashbuckle.Swagger.SwaggerDocument,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.IApiExplorer)">
+        <member name="T:Jwell.Sample.App_Start.SwaggerNet">
             <summary>
             
             </summary>
-            <param name="swaggerDoc"></param>
-            <param name="schemaRegistry"></param>
-            <param name="apiExplorer"></param>
+        </member>
+        <member name="M:Jwell.Sample.App_Start.SwaggerNet.PreStart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Common.HttpClientHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Common.HttpClientHelper.Post(System.String,System.String,System.String,System.String)">
+            <summary>
+            Post请求
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <param name="contentType"></param>
+            <param name="labradorToken">加入HTTPHeader的token信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.Common.OAuthHelper">
+            <summary>
+            OAuth帮助工具
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Common.OAuthHelper.GetUserInfo(System.String,System.String)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="token"></param>
+            <param name="cookieKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Common.OAuthHelper.PostRequest(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            发送Post请求
+            </summary>
+            <param name="url">地址</param>
+            <param name="param">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Common.OAuthHelper.GenerateLoginUrl(System.String,System.String)">
+            <summary>
+            生成授权登录登录地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.Controllers.BaseApiController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.BaseApiController.StandardAction(System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.BaseApiController.StandardAction``1(System.Func{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.Controllers.OAuthBaseInfoController">
+            <summary>
+            基础系统回调方法
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.OAuthBaseInfoController.AuthorizationCallBack(System.String,System.String,System.String)">
+            <summary>
+            回调
+            </summary>
+            <param name="code">此处code为employeeID</param>
+            <param name="state"></param>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.Controllers.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.UserController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.UserController.Post(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.UserController.Put(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Jwell.Sample.Controllers.ValuesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.ValuesController.#ctor(Jwell.Application.Services.IAdminUserService)">
+            <summary>
+            
+            </summary>
+            <param name="adminUserService"></param>
         </member>
         <member name="M:Jwell.Sample.Controllers.ValuesController.GetValueById(System.Int32)">
             <summary>
@@ -41,12 +162,108 @@
             <param name="value">value</param>
             <returns></returns>
         </member>
+        <member name="T:Jwell.Sample.Controllers.BaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.BaseController.StandardAction(System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.BaseController.StandardAction``1(System.Func{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
         <member name="M:Jwell.Sample.Controllers.BaseController.DownloadFile(System.String,System.Byte[])">
             <summary>
             流文件下载
             </summary>
             <param name="fileName">文件名</param>
             <param name="fileStream">文件流</param>
+        </member>
+        <member name="T:Jwell.Sample.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.HomeController.#ctor(Jwell.Application.Services.IAdminUserService)">
+            <summary>
+            
+            </summary>
+            <param name="adminUserService"></param>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.HomeController.List(Jwell.Application.Services.Params.SearchAdminUserParam)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.HomeController.Save(Jwell.Application.Services.Dtos.AdminUserDto)">
+            <summary>
+            
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.HomeController.GetResult">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Controllers.HomeController.Export(Jwell.Application.Services.Params.SearchAdminUserParam)">
+            <summary>
+            Excel导出
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="T:Jwell.Sample.BundleConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            有关捆绑的详细信息，请访问 https://go.microsoft.com/fwlink/?LinkId=301862
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:Jwell.Sample.FilterConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:Jwell.Sample.RouteConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            
+            </summary>
+            <param name="routes"></param>
         </member>
         <member name="T:Jwell.Sample.JwellWebModule">
             <summary>
@@ -56,6 +273,22 @@
         <member name="M:Jwell.Sample.JwellWebModule.Initialize">
             <summary>
             初始化
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ApiDescriptionExtensions">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:Jwell.Sample.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
@@ -72,9 +305,72 @@
             or you can provide the samples for the requests/responses.
             </summary>
         </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.HelpPageConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.Controllers.HelpController">
             <summary>
             The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.Controllers.HelpController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.Controllers.HelpController.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.Controllers.HelpController.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.Controllers.HelpController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.Controllers.HelpController.Api(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.Controllers.HelpController.ResourceModel(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="modelName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.HelpPageAreaRegistration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.HelpPageAreaRegistration.AreaName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.HelpPageConfigurationExtensions">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:Jwell.Sample.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
@@ -223,9 +519,123 @@
             An <see cref="T:Jwell.Sample.Areas.HelpPage.Models.HelpPageApiModel"/>
             </returns>
         </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.CollectionModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.CollectionModelDescription.ElementDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.Properties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.DictionaryModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.Values">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumValueDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.KeyModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.ValueModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescription">
             <summary>
             Describes a type model.
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescription.ModelType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescription.Name">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
@@ -233,9 +643,93 @@
             Generates model descriptions for given types.
             </summary>
         </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.DocumentationProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GetOrCreateModelDescription(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
             <summary>
             Use this attribute to change the name of the <see cref="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterAnnotation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.AnnotationAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ModelDescriptions.ParameterDescription.TypeDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Areas.HelpPage.ModelDescriptions.SimpleTypeModelDescription">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.Models.HelpPageApiModel">
@@ -472,10 +966,28 @@
             Gets the parameter names.
             </summary>
         </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.HelpPageSampleKey.ParameterType">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:Jwell.Sample.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
             <summary>
             Gets the <see cref="P:Jwell.Sample.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
             </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.HelpPageSampleKey.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.HelpPageSampleKey.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.ImageSample">
             <summary>
@@ -488,10 +1000,64 @@
             </summary>
             <param name="src">The URL of an image.</param>
         </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.ImageSample.Src">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ImageSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ImageSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.ImageSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.InvalidSample">
             <summary>
             This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
             </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.InvalidSample.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.InvalidSample.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.InvalidSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.InvalidSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.InvalidSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.ObjectGenerator">
             <summary>
@@ -519,10 +1085,50 @@
             Indicates whether the sample is used for request or response
             </summary>
         </member>
+        <member name="F:Jwell.Sample.Areas.HelpPage.SampleDirection.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Jwell.Sample.Areas.HelpPage.SampleDirection.Response">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.TextSample">
             <summary>
             This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
             </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.TextSample.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:Jwell.Sample.Areas.HelpPage.TextSample.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.TextSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.TextSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.TextSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider">
             <summary>
@@ -534,6 +1140,149 @@
             Initializes a new instance of the <see cref="T:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider"/> class.
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="controllerDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpParameterDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="parameterDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetResponseDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetMethodNode(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jwell.Sample.Areas.HelpPage.XmlDocumentationProvider.GetMemberName(System.Reflection.MethodInfo)">
+            <summary>
+            
+            </summary>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jwell.Sample.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.WebApiApplication.Application_Start">
+            <summary>
+            应用程序启动
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.Models.ActionHandleAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Models.ActionHandleAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="M:Jwell.Sample.Models.ActionHandleAttribute.OnActionExecuted(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Jwell.Sample.Models.UserAuthorizeAttribute">
+            <summary>
+            token验证
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.Models.UserAuthorizeAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            进行页面验证，查看Token是否存在
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Jwell.Sample.Models.UserInfo">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Models.UserInfo.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Models.UserInfo.EmployeeID">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Models.UserInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Jwell.Sample.Models.UserInfo.Department">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="T:Jwell.Sample.ApiIgnoreDocumentExtensions">
+            <summary>
+            Swagger扩展
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.ApiIgnoreDocumentExtensions.Apply(Swashbuckle.Swagger.SwaggerDocument,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.IApiExplorer)">
+            <summary>
+            
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiExplorer"></param>
+        </member>
+        <member name="T:Jwell.Sample.ExceptionHandleAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Jwell.Sample.ExceptionHandleAttribute.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutedContext"></param>
         </member>
     </members>
 </doc>

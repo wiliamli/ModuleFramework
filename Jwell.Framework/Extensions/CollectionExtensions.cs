@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Jwell.Framework.Extensions
 {
@@ -38,6 +38,66 @@ namespace Jwell.Framework.Extensions
 
             source.Add(item);
             return true;
+        }
+
+        /// <summary>
+        /// 集合添加
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="items"></param>
+        public static void AddRange<T>(this ICollection<T> source, IEnumerable<T> items)
+        {
+            if (items == null)
+            {
+                return;
+            }
+            foreach (var item in items)
+            {
+                source.Add(item);
+            }
+        }
+
+        /// <summary>
+        /// 默认以","分隔，返回以","分隔串联的字符串
+        /// </summary>
+        /// <param name="values">字符串集合</param>
+        /// <returns>以","分隔串联的字符串</returns>
+        public static string JoinString(this IEnumerable<string> values)
+        {
+            return JoinString(values, ",");
+        }
+
+        /// <summary>
+        /// 以给定字符分隔，返回串联的字符串
+        /// </summary>
+        /// <param name="values">字符串集合</param>
+        /// <param name="split">分隔符</param>
+        /// <returns></returns>
+        public static string JoinString(this IEnumerable<string> values, string split)
+        {
+            var result = values.Aggregate(string.Empty, (current, value) => current + (split + value));
+            result = result.TrimStart(split.ToCharArray());
+            return result;
+        }
+
+        /// <summary>
+        /// foreach
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public static IEnumerable<T> Each<T>(this IEnumerable<T> source, Action<T> action)
+        {
+            if (source != null)
+            {
+                foreach (var item in source)
+                {
+                    action(item);
+                }
+            }
+            return source;
         }
     }
 }

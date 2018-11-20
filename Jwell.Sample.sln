@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jwell.Modules.Dapper", "Jwe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jwell.Modules.Cache", "Jwell.Modules.Cache\Jwell.Modules.Cache.csproj", "{44B49CD0-98BD-4284-AF33-EE7432AC986C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jwell.Modules.MessageQueue", "Jwell.Modules.MessageQueue\Jwell.Modules.MessageQueue.csproj", "{B4F058D2-66D3-47C7-A36A-115B150A2C6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{44B49CD0-98BD-4284-AF33-EE7432AC986C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44B49CD0-98BD-4284-AF33-EE7432AC986C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44B49CD0-98BD-4284-AF33-EE7432AC986C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F058D2-66D3-47C7-A36A-115B150A2C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F058D2-66D3-47C7-A36A-115B150A2C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F058D2-66D3-47C7-A36A-115B150A2C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F058D2-66D3-47C7-A36A-115B150A2C6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +132,7 @@ Global
 		{984D2EEE-15B4-48DA-8C39-9EFB76AEEAB4} = {15109227-9ADF-4571-9627-5E9818F4736D}
 		{281DCFAF-269D-4607-86E1-1CA8C03292DB} = {15109227-9ADF-4571-9627-5E9818F4736D}
 		{44B49CD0-98BD-4284-AF33-EE7432AC986C} = {15109227-9ADF-4571-9627-5E9818F4736D}
+		{B4F058D2-66D3-47C7-A36A-115B150A2C6D} = {15109227-9ADF-4571-9627-5E9818F4736D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1228570-5E65-43B5-9A41-264595B12F1C}

@@ -7,11 +7,18 @@ using System.Web.Mvc;
 
 namespace Jwell.Sample.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class BaseController : Controller
     {
         // GET: Base
 
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
         public StandardJsonResult StandardAction(Action action)
         {
             var result = new StandardJsonResult();
@@ -19,12 +26,18 @@ namespace Jwell.Sample.Controllers
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="action"></param>
+        /// <returns></returns>
         public StandardJsonResult<T> StandardAction<T>(Func<T> action)
-        {
+        { 
             var result = new StandardJsonResult<T>();
             result.StandardAction(() =>
             {
-                result.Value = action();
+                result.Data = action();
             });
             return result;
         }

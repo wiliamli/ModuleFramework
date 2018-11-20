@@ -36,11 +36,11 @@ namespace Jwell.Framework.Paging
 
     public class PageResult<T> : PageResult
     {
-        public List<T> Value { get; set; }
+        public List<T> Pager { get; set; }
         
         public PageResult()
         {
-            this.Value = new List<T>();
+            this.Pager = new List<T>();
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Jwell.Framework.Paging
 
             this.PageSize = pageSize;
             this.PageIndex = pageIndex;
-            this.Value.AddRange(source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList());
+            this.Pager.AddRange(source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList());
         }
 
         /// <summary>
@@ -79,7 +79,8 @@ namespace Jwell.Framework.Paging
             }
             this.PageSize = pageSize;
             this.PageIndex = pageIndex;
-            this.Value.AddRange(source.Skip((pageIndex - 1) * pageSize).Take(pageSize));
+            this.TotalCount = totalCount;
+            this.Pager.AddRange(source.Skip((pageIndex - 1) * pageSize).Take(pageSize));
         }
 
         /// <summary>
@@ -93,8 +94,9 @@ namespace Jwell.Framework.Paging
             : this()
         {
             this.PageIndex = pageIndex;
-            this.PageSize = PageSize;
-            this.Value = source;
+            this.PageSize = pageSize;
+            this.TotalCount = totalCount;
+            this.Pager = source;
         }
     }
 }

@@ -10,16 +10,16 @@ namespace Jwell.Domain.Entities.Base
         /// 主键自增Id
         /// </summary>
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public override long Id
+        public override long ID
         {
             get
             {
-                return base.Id;
+                return base.ID;
             }
 
             set
             {
-                base.Id = value;
+                base.ID = value;
             }
         }
     }

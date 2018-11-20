@@ -16,6 +16,9 @@ using Jwell.Sample.Areas.HelpPage.Models;
 
 namespace Jwell.Sample.Areas.HelpPage
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class HelpPageConfigurationExtensions
     {
         private const string ApiModelPrefix = "MS_HelpPageApiModel_";

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jwell.Module.WebApi.INI
+namespace Jwell.Modules.WebApi.INI
 {
     public class IniConfig
     {
         public static string ReadValue(string key)
         {
-            string iniPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory), "projectladder.ini");
+            string iniPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory), "setup.json");
             string value = string.Empty;
             if (System.IO.File.Exists(iniPath))
             {
@@ -20,7 +20,7 @@ namespace Jwell.Module.WebApi.INI
             }
             else
             {
-                throw new IniException("projectladder.ini未找到,该文件必须存放在根目录下");
+                throw new IniException("setup.json未找到,该文件必须存放在根目录下");
             }
         }
 

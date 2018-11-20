@@ -18,4 +18,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\obj\Debug\Jwell.Integr
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\obj\Debug\Jwell.Integration.csproj.CopyComplete
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\obj\Debug\Jwell.Integration.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\obj\Debug\Jwell.Integration.pdb
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\obj\Debug\Jwell.Integration.csprojAssemblyReference.cache
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Integration\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll

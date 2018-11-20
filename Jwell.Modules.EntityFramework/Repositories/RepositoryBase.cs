@@ -43,19 +43,22 @@ namespace Jwell.Modules.EntityFramework.Repositories
         public virtual int Add(TEntity entity)
         {
             Set.Add(entity);
-            return DbContext.SaveChanges();
+            //return DbContext.SaveChanges();
+            return 1;
         }
 
         public virtual int Update(TEntity entity)
         {
             DbContext.Entry(entity).State = EntityState.Modified;
-            return DbContext.SaveChanges();
+            //return DbContext.SaveChanges();
+            return 1;
         }
 
         public virtual int Delete(TEntity entity)
         {
             Set.Remove(entity);
-            return DbContext.SaveChanges();
+            //return DbContext.SaveChanges();
+            return 1;
         }
 
         /// <summary>
@@ -97,7 +100,7 @@ namespace Jwell.Modules.EntityFramework.Repositories
         /// <returns>返回影响行数</returns>
         public virtual int ExecuteSqlCommand(string sql)
         {
-            return DbContext.Database.ExecuteSqlCommand(TransactionalBehavior.EnsureTransaction, sql, null);
+            return DbContext.Database.ExecuteSqlCommand(TransactionalBehavior.EnsureTransaction, sql, new object[] { });
         }
 
         /// <summary>
@@ -107,7 +110,7 @@ namespace Jwell.Modules.EntityFramework.Repositories
         /// <returns>返回影响行数</returns>
         public virtual Task<int> ExecuteSqlCommandAsync(string sql)
         {
-            return DbContext.Database.ExecuteSqlCommandAsync(TransactionalBehavior.EnsureTransaction, sql, null);
+            return DbContext.Database.ExecuteSqlCommandAsync(TransactionalBehavior.EnsureTransaction, sql, new object[] { });
         }
 
         /// <summary>
@@ -140,7 +143,7 @@ namespace Jwell.Modules.EntityFramework.Repositories
         /// <returns></returns>
         public virtual System.Collections.Generic.IEnumerable<TElement> SqlQuery<TElement>(string sql)
         {
-            return DbContext.Database.SqlQuery<TElement>(sql, null);
+            return DbContext.Database.SqlQuery<TElement>(sql, new object[] { });
         }
     }
 }

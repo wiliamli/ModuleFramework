@@ -1,61 +1,80 @@
-﻿using StackExchange.Redis;
+﻿using Jwell.Framework.Utilities;
+using StackExchange.Redis;
 using System;
-using Jwell.Framework.Utilities;
-using System.Threading.Tasks;
 
 namespace Jwell.Modules.Cache.Redis
 {
     public sealed class RedisCache
     {
-        /// <summary>
-        /// redis配置文件信息
-        /// </summary>
-        private static ConnectionMultiplexer connection;
-        private static IDatabase database;
-        private const long TICKCARDINAL = 10000000;
-
-        static RedisCache()
+        private static readonly object objLock = new object();
+        private IDatabase Database { get; set; }
+        public RedisCache(int db = 0)
         {
-            connection = RedisManagement.Connection;
-            database = connection.GetDatabase(0);
+            //db默认数量
+            if (db >= 0 && db < 16)
+            {
+                Database = RedisManagement.RedisClient.GetDatabase(db);
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("db", db, "必须在[0,15]的范围");
+            }
         }
 
-        public T GetString<T>(string key)
+        public T Get<T>(string key)
         {
             T t = default(T);
-            RedisValue redisValue = database.StringGet(key);
-            if (!redisValue.IsNullOrEmpty)
+            lock (objLock) // 线程安全，单线程操作
             {
-                t =  Serializer.FromJson<T>(redisValue.ToString());
+                if (Database.KeyExists(key))
+                {
+                    t = Serializer.FromJson<T>(Database.StringGet(key));
+                }
             }
             return t;
         }
          
-        public void RemoveCache(string key)
+        public bool RemoveCache(string key)
         {
-            database.KeyDelete(key);
-        }
-
-        public async Task<bool> SetCacheAsync<T>(string key, T value, long expireTime)
-        {
-            bool result = await database.StringSetAsync(key, Serializer.ToJson(value),
-                new TimeSpan(expireTime * TICKCARDINAL)); //timespan以100毫秒为单位
-            return result;
+            bool success = false;
+            lock (objLock) // 线程安全，单线程操作
+            {
+                success = Database.KeyDelete(key);
+            }
+            return success;
         }
 
         /// <summary>
-        /// 
+        /// 写入缓存
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">数据类型</typeparam>
         /// <param name="key"></param>
         /// <param name="value"></param>
         /// <param name="expireTime">秒为单位</param>
         /// <returns></returns>
-        public bool SetCache<T>(string key, T value, long expireTime)
+        public bool Set<T>(string key, T value, int expireTime)
         {
-            bool result = database.StringSet(key, Serializer.ToJson(value), 
-                new TimeSpan(expireTime * TICKCARDINAL)); //timespan以100毫秒为单位
+            bool result = false;
+            lock (objLock) // 线程安全，单线程操作
+            {
+                result = Database.StringSet(key, Serializer.ToJson(value), new TimeSpan(0, 0, expireTime));
+            }
             return result;
+        }
+
+        /// <summary>
+        /// 是否存在
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public bool IsExist(string key)
+        {
+            bool isExist = false;
+            lock (objLock) // 线程安全，单线程操作
+            {
+                isExist= Database.KeyExists(key);
+            }
+            return isExist;
         }
     }
 }

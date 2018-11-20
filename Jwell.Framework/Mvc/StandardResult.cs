@@ -32,6 +32,6 @@
 
     public class StandardResult<T> : StandardResult, IStandardResult<T>
     {
-        public T Value { get; set; }
+        public T Data { get; set; }
     }
 }

@@ -18,3 +18,11 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\NPOI.x
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\obj\Debug\Jwell.Modules.DSFClient.csproj.CopyComplete
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\obj\Debug\Jwell.Modules.DSFClient.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\obj\Debug\Jwell.Modules.DSFClient.pdb
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\Jwell.Modules.DSFClient.dll.config
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\System.Net.Http.Formatting.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\System.Net.Http.Formatting.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\zh-Hans\System.Net.Http.Formatting.resources.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\obj\Debug\Jwell.Modules.DSFClient.csprojAssemblyReference.cache
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.DSFClient\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll

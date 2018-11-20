@@ -4,8 +4,16 @@ using System.Web.Http;
 
 namespace Jwell.Sample.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class BaseApiController : ApiController
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
         [HttpPost]
         public StandardJsonResult StandardAction(Action action)
         {
@@ -14,13 +22,19 @@ namespace Jwell.Sample.Controllers
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="action"></param>
+        /// <returns></returns>
         [HttpPost]
         public StandardJsonResult<T> StandardAction<T>(Func<T> action)
         {
             var result = new StandardJsonResult<T>();
             result.StandardAction(() =>
             {
-                result.Value = action();
+                result.Data = action();
             });
             return result;
         }

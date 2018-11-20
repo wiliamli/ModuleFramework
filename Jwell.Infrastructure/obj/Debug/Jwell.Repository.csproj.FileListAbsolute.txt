@@ -1,14 +1,9 @@
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Infrastructure.dll.config
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Infrastructure.dll
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Infrastructure.pdb
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\EntityFramework.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Core.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Framework.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Modules.EntityFramework.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Autofac.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Castle.Core.dll
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Core.pdb
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Framework.pdb
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Modules.EntityFramework.pdb
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Modules.EntityFramework.dll.config
@@ -18,8 +13,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Autofac.x
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Castle.Core.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Repository.csproj.CoreCompileInputs.cache
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Repository.csproj.CopyComplete
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Infrastructure.dll
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Infrastructure.pdb
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Newtonsoft.Json.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Newtonsoft.Json.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Oracle.ManagedDataAccess.dll
@@ -61,3 +54,13 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\NPOI.Open
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\NPOI.OpenXml4Net.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\NPOI.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Repository.csprojAssemblyReference.cache
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Repository.dll.config
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Repository.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Repository.pdb
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Domain.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\Jwell.Domain.pdb
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Repository.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\obj\Debug\Jwell.Repository.pdb
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Infrastructure\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll

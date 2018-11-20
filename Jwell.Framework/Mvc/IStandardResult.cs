@@ -8,6 +8,6 @@
 
     public interface IStandardResult<T> : IStandardResult
     {
-        T Value { get; set; }
+        T Data { get; set; }
     }
 }

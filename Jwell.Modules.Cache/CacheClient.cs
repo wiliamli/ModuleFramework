@@ -5,35 +5,53 @@ namespace Jwell.Modules.Cache
 {
     public class CacheClient : ICacheClient
     {
-        private Redis.RedisCache redis = new Redis.RedisCache();
+        /// <summary>
+        /// redis数据库,[0-15之间的整数]
+        /// </summary>
+        private int db = 0;
+        public int DB
+        {
+            get
+            {
+                return db;
+            }
+            set
+            {
+                if (value >= 0 && value < 16)
+                    db = value;
+                else
+                    throw new ArgumentOutOfRangeException("db", db, "必须在[0,15]的范围");
+            }
+        }
+
+        private Redis.RedisCache RedisCache
+        {
+            get
+            {
+                return new Redis.RedisCache(DB);
+            }
+        }
+
 
         public T GetCache<T>(string key)
         {
-           return redis.GetString<T>(key);
+           return RedisCache.Get<T>(key);
         }
 
-        public void RemoveCache(string key)
+        public bool RemoveCache(string key)
         {
-            redis.RemoveCache(key);
-        }
-
-        public async Task<bool> SetCacheAsync<T>(string key, T value, int expireTime = 300)
-        {
-            bool result = await redis.SetCacheAsync(key, value, expireTime);
-            return result;
+            return RedisCache.RemoveCache(key);
         }
 
         public bool SetCache<T>(string key, T value, int expireTime)
         {
-            bool result = redis.SetCache(key, value, expireTime);
+            bool result = RedisCache.Set(key, value, expireTime);
             return result;
         }
 
-        public bool SetCache<T>(string key, T value, DateTime expireTime)
+        public bool IsExist(string key)
         {
-            long timeSpan = (expireTime - DateTime.Now).Ticks;
-            bool result = redis.SetCache(key, value, timeSpan);
-            return result;
+            return RedisCache.IsExist(key);
         }
     }
 }

@@ -181,7 +181,9 @@ namespace Jwell.Framework.Extensions
                     .Where(i =>
                     {
                         var ti = i.GetTypeInfo();
+#pragma warning disable CS0612 // 类型或成员已过时
                         return ti.IsVisible || ti.Assembly.IsInternalToDynamicProxy();
+#pragma warning restore CS0612 // 类型或成员已过时
                     })
                     .ToArray();
 
@@ -367,7 +369,9 @@ namespace Jwell.Framework.Extensions
             if (componentRegistration.Services
                 .OfType<IServiceWithType>()
                 .Select(s => s.ServiceType.GetTypeInfo())
+#pragma warning disable CS0612 // 类型或成员已过时
                 .Any(s => !s.IsInterface || (!s.Assembly.IsInternalToDynamicProxy() && !s.IsVisible)))
+#pragma warning restore CS0612 // 类型或成员已过时
             {
                 //throw new InvalidOperationException(
                 //    string.Format(

@@ -33,6 +33,15 @@
     <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Jwell.Modules.SetupConfig">
+      <HintPath>..\..\..\Jwell.Log\packages\Jwell.SetupConfig.1.0.0\Jwell.Modules.SetupConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -48,7 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JwellLogger.cs" />
-    <Compile Include="JwellLoggerModule.cs" />
+    <Compile Include="Log\Channel.cs" />
+    <Compile Include="Log\Constant\LogConstant.cs" />
+    <Compile Include="Log\LogContext.cs" />
+    <Compile Include="Log\Model\LogBase.cs" />
+    <Compile Include="Log\Model\LogModel.cs" />
+    <Compile Include="Log\Model\Marker.cs" />
+    <Compile Include="Log\Model\MonitorLog.cs" />
+    <Compile Include="Log\Model\Priority.cs" />
+    <Compile Include="Log\PerformanceMonitor.cs" />
+    <Compile Include="Log\PerformanceMonitorFactory.cs" />
+    <Compile Include="Log\RemoteConfig.cs" />
+    <Compile Include="Log\Source.cs" />
+    <Compile Include="Log\TransportFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

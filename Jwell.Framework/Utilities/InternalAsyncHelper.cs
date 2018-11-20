@@ -17,6 +17,26 @@ namespace Jwell.Framework.Utilities
                 .Invoke(null, new object[] { actualReturnValue, action, finalAction });
         }
 
+        public static async Task<T> AwaitTaskWithPostActionAndFinallyAndGetResult<T>(object actualReturnValue, Func<Task> action, Action<Exception> finalAction)
+        {
+            Exception exception = null;
+            try
+            {
+                var result = await (actualReturnValue as Task<T>);
+                await action();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                exception = ex;
+                throw;
+            }
+            finally
+            {
+                finalAction(exception);
+            }
+        }
+
         public static async Task AwaitTaskWithPostActionAndFinally(Task actualReturnValue, Func<Task> postAction, Action<Exception> finalAction)
         {
             Exception exception = null;

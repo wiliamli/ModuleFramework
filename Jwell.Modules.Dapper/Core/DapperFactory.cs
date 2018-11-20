@@ -7,15 +7,27 @@ using System.Data.OracleClient;
 
 namespace Jwell.Modules.Dapper.Core
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class DapperFactory
     {
         private static readonly string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
 
-
-        public static OracleConnection CreateOracleConnection()
+#pragma warning disable CS0618 // 类型或成员已过时
+                              /// <summary>
+                              /// /
+                              /// </summary>
+        public static OracleConnection CreateOracleConnection
+#pragma warning restore CS0618 // 类型或成员已过时
         {
-            var connection = new OracleConnection(ConnectionString);
-            return connection;
+            get
+            {
+#pragma warning disable CS0618 // 类型或成员已过时
+                var connection = new OracleConnection(ConnectionString);
+#pragma warning restore CS0618 // 类型或成员已过时
+                return connection;
+            }
         }
     }
 }

@@ -25,3 +25,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\bin\Debug\
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\bin\Debug\NPOI.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\bin\Debug\System.Data.Common.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\obj\Debug\Jwell.Modules.EntityFramework.csprojAssemblyReference.cache
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.EntityFramework\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll

@@ -6,7 +6,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Jwell.Fram
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Microsoft.Threading.Tasks.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\StackExchange.Redis.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Castle.Core.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\NPOI.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Newtonsoft.Json.dll
@@ -19,7 +18,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Autofac.xm
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Microsoft.Threading.Tasks.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
-E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\StackExchange.Redis.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Castle.Core.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\NPOI.xml
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\Newtonsoft.Json.xml
@@ -28,3 +26,8 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\obj\Debug\Jwell.Modu
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\obj\Debug\Jwell.Modules.Cache.csproj.CopyComplete
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\obj\Debug\Jwell.Modules.Cache.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\obj\Debug\Jwell.Modules.Cache.pdb
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\StackExchange.Redis.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Cache\bin\Debug\StackExchange.Redis.xml

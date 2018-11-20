@@ -10,9 +10,14 @@ using System.Web.Routing;
 
 namespace Jwell.Sample
 {
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class WebApiApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// 应用程序启动
+        /// </summary>
         protected void Application_Start()
         {
             //AreaRegistration.RegisterAllAreas();

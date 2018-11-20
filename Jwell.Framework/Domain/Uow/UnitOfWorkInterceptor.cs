@@ -16,12 +16,7 @@ namespace Jwell.Framework.Domain.Uow
 
         public UnitOfWorkInterceptor(IUnitOfWorkFactory unitOfWorkFactory)
         {
-            if (unitOfWorkFactory == null)
-            {
-                throw new ArgumentNullException(nameof(unitOfWorkFactory));
-            }
-
-            UnitOfWorkFactory = unitOfWorkFactory;
+            UnitOfWorkFactory = unitOfWorkFactory ?? throw new ArgumentNullException(nameof(unitOfWorkFactory));
         }
 
         public void Intercept(IInvocation invocation)

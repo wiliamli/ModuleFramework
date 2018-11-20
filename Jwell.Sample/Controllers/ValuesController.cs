@@ -5,9 +5,16 @@ using System.Web.Http;
 
 namespace Jwell.Sample.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ValuesController : BaseApiController
     {
         private IAdminUserService adminUserService;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="adminUserService"></param>
         public ValuesController(IAdminUserService adminUserService)
         {
             this.adminUserService = adminUserService;
@@ -27,7 +34,7 @@ namespace Jwell.Sample.Controllers
              {
                  AdminUserDto admin = new AdminUserDto
                  {
-                     Id = adminUserService.Count()
+                     ID = adminUserService.Count()
                  };
                  return admin;
              });

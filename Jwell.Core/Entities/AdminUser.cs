@@ -1,9 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Jwell.Domain.Entities.Base;
 
 namespace Jwell.Domain.Entities
 {
+    [Table("AdminUser")]
     public class AdminUser : BaseEntity
     {
         /// <summary>

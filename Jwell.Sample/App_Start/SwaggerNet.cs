@@ -10,8 +10,14 @@ using System.Web.Routing;
 //[assembly: WebActivator.PostApplicationStartMethod(typeof(Jwell.Sample.App_Start.SwaggerNet), "PostStart")]
 namespace Jwell.Sample.App_Start 
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class SwaggerNet 
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public static void PreStart() 
         {
             RouteTable.Routes.MapHttpRoute(

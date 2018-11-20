@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Facade\AdminUser.cs" />
+    <Compile Include="Facade\AdminUserRequest.cs" />
+    <Compile Include="Facade\AdminUserResponse.cs" />
     <Compile Include="JwellIntegrationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdminUserIntegration\AdminUserIntegration.cs" />

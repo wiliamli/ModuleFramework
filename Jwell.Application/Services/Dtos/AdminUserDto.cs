@@ -12,9 +12,9 @@ namespace Jwell.Application.Services.Dtos
     //[Freeze(ColSplit = 2, RowSplit = 1, LeftMostColumn = 2, TopRow = 1)]
     public class AdminUserDto
     {
-        [Column(Index = 0, Title = "Id", AllowMerge = false)]
+        [Column(Index = 0, Title = "ID", AllowMerge = false)]
         [JsonIgnore]
-        public long Id { get; set; }
+        public long ID { get; set; }
 
         [Column(Index = 1, Title = "账户", AllowMerge = false)]
         public string Account { get; set; }
@@ -78,7 +78,7 @@ namespace Jwell.Application.Services.Dtos
             return from a in query
                    select new AdminUserDto()
                    {
-                       Id = a.Id,
+                       ID = a.ID,
                        Account = a.Account,
                        Name = a.Name,
                        Code = a.Code,
@@ -92,10 +92,10 @@ namespace Jwell.Application.Services.Dtos
 
         public static PageResult<AdminUserDto> ToDtos(this PageResult<AdminUser> query)
         {
-            var queryDto = (from a in query.Value
+            var queryDto = (from a in query.Pager
                             select new AdminUserDto()
                             {
-                                Id = a.Id,
+                                ID = a.ID,
                                 Account = a.Account,
                                 Name = a.Name,
                                 Code = a.Code,
@@ -119,7 +119,7 @@ namespace Jwell.Application.Services.Dtos
                     Account = entity.Account,
                     Code = entity.Code,
                     CreateDate = entity.CreateDate,
-                    Id = entity.Id,
+                    ID = entity.ID,
                     Img = entity.Img,
                     Name = entity.Name,
                     Password = entity.Password,
@@ -141,7 +141,7 @@ namespace Jwell.Application.Services.Dtos
                     Account = dto.Account,
                     Code = dto.Code,
                     CreateDate = dto.CreateDate,
-                    Id = dto.Id,
+                    ID = dto.ID,
                     Img = dto.Img,
                     Name = dto.Name,
                     Password = dto.Password,

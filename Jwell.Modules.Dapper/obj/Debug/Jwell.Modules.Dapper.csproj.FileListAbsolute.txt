@@ -25,3 +25,6 @@ E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\bin\Debug\Microsoft
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\bin\Debug\System.Data.OracleClient.dll
 E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\obj\Debug\Jwell.Modules.Dapper.csprojAssemblyReference.cache
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\bin\Debug\System.Web.Mvc.dll
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\bin\Debug\System.Web.Mvc.xml
+E:\Project\Jwell.Framework\Jwell.Sample\Jwell.Modules.Dapper\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll

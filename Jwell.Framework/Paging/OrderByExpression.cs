@@ -91,6 +91,24 @@ namespace Jwell.Framework.Paging
                 return query.OrderBy(Expression.Lambda<Func<T, float?>>(member, para));
             }
 
+			if (propertyType == typeof(long))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, long>>(member, para));
+            }
+            if (propertyType == typeof(long?))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, long?>>(member, para));
+            }
+			
+			if (propertyType == typeof(short))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, short>>(member, para));
+            }
+            if (propertyType == typeof(short?))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, short?>>(member, para));
+            }
+			
             throw new Exception("Unsupported data type：" + propertyType);
         }
 
@@ -163,6 +181,24 @@ namespace Jwell.Framework.Paging
             if (propertyType == typeof(float?))
             {
                 return query.OrderByDescending(Expression.Lambda<Func<T, float?>>(member, para));
+            }
+			
+			if (propertyType == typeof(long))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, long>>(member, para));
+            }
+            if (propertyType == typeof(long?))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, long?>>(member, para));
+            }
+			
+			if (propertyType == typeof(short))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, short>>(member, para));
+            }
+            if (propertyType == typeof(short?))
+            {
+                return query.OrderByDescending(Expression.Lambda<Func<T, short?>>(member, para));
             }
 
             throw new Exception("Unsupported data type：" + propertyType);

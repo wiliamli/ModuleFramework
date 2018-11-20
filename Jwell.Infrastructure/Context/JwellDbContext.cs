@@ -10,10 +10,11 @@ namespace Jwell.Repository.Context
 {
     public class JwellDbContext: DbContext
     {
-        public JwellDbContext()
+        public JwellDbContext() 
             : base("Default")
         {
-
+            //阻止自动创建表
+            Database.SetInitializer(new JwellDbInitializer());                
         }
 
         public JwellDbContext(string nameOrConnectionString)
@@ -33,11 +34,10 @@ namespace Jwell.Repository.Context
         {
             modelBuilder.Conventions.Remove<DecimalPropertyConvention>();
             modelBuilder.Conventions.Add(new DecimalPropertyConvention(18, 4));
-            modelBuilder.HasDefaultSchema("JW");
+            modelBuilder.HasDefaultSchema("jwell");
             base.OnModelCreating(modelBuilder);
             Dasebase databaseType = GetDatabaseType();
             SetDefaultSchema(databaseType, modelBuilder);
-
         }
 
         public override int SaveChanges()

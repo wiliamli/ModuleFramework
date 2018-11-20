@@ -8,7 +8,7 @@ namespace Jwell.Modules.WebApi.Attributes
     /// <summary>
     /// 不作为OpenApi
     /// </summary>
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.All)]
     public class ApiIgnoreAttribute : Attribute
     {
     }

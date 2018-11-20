@@ -1,25 +1,21 @@
 ﻿using StackExchange.Redis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Jwell.Modules.Cache.Redis
 {
-    public static class RedisManagement
+    /// <summary>
+    /// 主要是为后期，由统一配置根据系统分配服务器IP，账户等
+    /// 开数据库访问
+    /// 目前先由非静态处理，再到后期单例
+    /// </summary>
+    public class RedisManagement
     {
-        public static ConnectionMultiplexer Connection { get; private set; }
+        public static ConnectionMultiplexer RedisClient { get; private set; }
 
+        #region 静态单例 
         static RedisManagement()
         {
-            ConfigurationOptions configurationOptions = new ConfigurationOptions
-            {
-                ClientName = "redisCache",
-                Password = "qazwsxedc"
-            };
-            configurationOptions.EndPoints.Add("10.130.0.254", 6379);
-            Connection = ConnectionMultiplexer.Connect(configurationOptions);
+            RedisClient = ConnectionMultiplexer.Connect($"{RedisConstant.IP}:{RedisConstant.PORT},password={RedisConstant.PASSWORD},abortConnect=false");
         }
+        #endregion
     }
 }
